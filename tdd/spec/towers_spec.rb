@@ -67,7 +67,19 @@ describe "Towers" do
   end
   
   describe '#move' do 
-    it 'removes disc from the from_tower'
-    it 'adds disc to the to_tower'
+    it 'removes disc from the from_tower' do 
+      game.move(0, 2)
+      expect(game.towers[0]).to eq([3, 2])
+    end
+    it 'adds disc to the to_tower' do 
+      game.move(0, 2)
+      expect(game.towers[2]).to eq([1])
+    end
   end
+  
+  # describe '#get_move' do 
+  #   it 'asks user for an input' do 
+  #     expect(game.get_move).to receive(:gets)
+  #   end
+  # end
 end

@@ -26,12 +26,15 @@ class Towers
     true
   end
   
-  def move 
-    
+  def move(from_tower, to_tower)
+    disc = towers[from_tower].pop 
+    towers[to_tower] << disc 
   end
   
   def get_move
-    
+    puts "enter the start and end tower. example: 1, 2 "
+    input = gets.chomp.split(",")
+    input.map{|el| Integer(el)}
   end
   
 end

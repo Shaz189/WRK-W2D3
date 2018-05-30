@@ -3,10 +3,25 @@ require 'towers'
 
 describe "Towers" do
   subject(:game) {Towers.new}
+  
   describe '#initialize' do 
-    it 'includes a tower instance variable' 
-    it 'tower instance variable is an array of three arrays'
-    it 'tower instance variable\'s first array should have three descending discs'
+    let(:arg_tower) {Towers.new([[],[3,2,1], []])}
+    it 'can accept an array of towers' do 
+      expect(arg_tower.towers).to eq([[],[3,2,1], []])
+    end 
+    
+    it 'includes a tower instance variable' do 
+      expect(game.towers).to eq([[3,2,1], [], []])
+    end 
+    
+    it 'tower instance variable is an array of three arrays' do 
+      expect(game.towers.length).to eq(3)
+    end 
+    
+    it 'tower instance variable\'s first array should have three descending discs' do 
+      expect(game.towers[0]).to eq([3, 2, 1])
+    end
+    
   end
   
   describe '#play' do 
@@ -30,9 +45,12 @@ describe "Towers" do
     end
   end
   
-  describe '#valid_move?' do 
+  describe '#valid_move?' do
+    it 'requires 2 towers' #do 
+    # expect {game.valid_move?(1)}.to raise_error(ArgumentError)
     context 'when move is valid' do 
       it 'returns true'
+      
     end 
     context 'when move is not valid' do 
       it 'returns false '

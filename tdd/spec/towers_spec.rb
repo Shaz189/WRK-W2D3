@@ -31,10 +31,17 @@ describe "Towers" do
   end
   
   describe '#valid_move?' do 
+    context 'when move is valid' do 
+      it 'returns true'
+    end 
+    context 'when move is not valid' do 
+      it 'returns false '
+    end  
     
   end
   
-  describe '#move?' do 
-    
+  describe '#move' do 
+    it 'removes disc from the from_tower'
+    it 'adds disc to the to_tower'
   end
 end

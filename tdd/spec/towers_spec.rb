@@ -47,14 +47,21 @@ describe "Towers" do
   end
   
   describe '#valid_move?' do
-    it 'requires 2 towers' #do 
-    # expect {game.valid_move?(1)}.to raise_error(ArgumentError)
+    it 'requires 2 towers' do 
+      expect {game.valid_move?(1)}.to raise_error(ArgumentError)
+    end
+    
     context 'when move is valid' do 
-      it 'returns true'
+      it 'returns true' do 
+        expect(game.valid_move?(0, 1)).to be true 
+      end 
+      
       
     end 
     context 'when move is not valid' do 
-      it 'returns false '
+      it 'returns false ' do 
+        expect(game.valid_move?(3, 6)).to be false
+      end 
     end  
     
   end

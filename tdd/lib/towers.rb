@@ -7,7 +7,14 @@ class Towers
   end
   
   def play 
-    
+    until won?
+      move_input = get_move 
+      if valid_move?(move_input[0], move_input[1])
+        move(move_input[0], move_input[1])
+      end
+      
+    end
+    puts "congrats you win"
   end
   
   def won?

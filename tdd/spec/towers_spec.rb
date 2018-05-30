@@ -24,11 +24,12 @@ describe "Towers" do
     
   end
   
-  describe '#play' do 
-    it 'asks user for input for a move'
-    it 'takes input and calls valid_move?'
-    it 'after move always checks for won?'
-  end
+  # describe '#play' do 
+  #   it 'after move always checks for won?' do 
+  #     expect(game).to receive(:won?)
+  #     game.play
+  #   end
+  # end
   
   describe '#won?' do 
     context 'when the game is won' do 

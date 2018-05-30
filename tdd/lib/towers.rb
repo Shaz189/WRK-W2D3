@@ -11,7 +11,8 @@ class Towers
   end
   
   def won?
-    
+    return true if towers[0].empty?
+    return true if towers[1].length == 3 || towers[2].length == 3
   end
   
   def valid_move?(from_tower, to_tower)

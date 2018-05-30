@@ -32,16 +32,17 @@ describe "Towers" do
   
   describe '#won?' do 
     context 'when the game is won' do 
-      # let(:won_game) { Towers.new([[], [3, 2, 1], []]) }
-      it 'returns true' #do
-      #   expect(won_game).to be_won
-      # end
+      let(:won_game) { Towers.new([[], [3, 2, 1], []]) }
+      
+      it 'returns true' do
+        expect(won_game).to be_won
+      end
     end
     
     context 'when the game is not won' do 
-      
-      it 'returns false'
-      
+      it 'returns false' do 
+        expect(game).to_not be_won
+      end  
     end
   end
   
